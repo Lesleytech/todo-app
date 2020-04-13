@@ -1,192 +1,191 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, #a49, #84f);
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #a49, #84f);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
-    max-height: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.9);
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 form {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    z-index: 100;
-    background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  z-index: 100;
+  background: transparent;
 }
 
 form input {
-    height: 50px;
-    width: 90%;
-    box-sizing: border-box;
-    padding: 15px;
-    border: none;
-    color: #a49;
-    border-radius: 2px;
-    font-size: 18px;
+  height: 50px;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: none;
+  color: #a49;
+  border-radius: 2px;
+  font-size: 18px;
 }
 
 form input:focus {
-    outline: none;
+  outline: none;
 }
 
 form input::placeholder {
-    color: #a7c;
+  color: #a7c;
 }
 
 .todo-list-container {
-    position: absolute;
-    top: 150px;
-    width: 100%;
-    overflow: auto;
-    max-height: calc(100vh - 200px);
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  overflow: auto;
+  max-height: calc(100vh - 200px);
 }
 
 .todo-list-container::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 .todo-list-container::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 .todo-list-container::-webkit-scrollbar-thumb {
-    background: #f55;
+  background: #f55;
 }
 
 .todo-list-container::-webkit-scrollbar-thumb:hover {
-    background: #f77;
+  background: #f77;
 }
 
 #todo-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-item {
-    position: relative;
-    display: flex;
-    background: #f55;
-    min-height: 40px;
-    width: 90%;
-    overflow: hidden;
-    margin-bottom: 10px;
-    align-items: center;
-    transition: all 0.5s ease;
-    color: white;
+  position: relative;
+  display: flex;
+  background: #f55;
+  min-height: 40px;
+  width: 90%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  align-items: center;
+  transition: all 0.5s ease;
+  color: white;
 }
 
 .todo-task {
-    flex: 1;
-    padding: 10px;
-    max-width: calc(100% - 100px);
-    overflow-wrap: break-word;
-    font-size: 20px;
+  flex: 1;
+  padding: 10px;
+  max-width: calc(100% - 100px);
+  overflow-wrap: break-word;
+  font-size: 16px;
 }
 
 .del-btn,
 .done-btn {
-    border: none;
-    height: 100%;
-    width: 40px;
-    padding: 0 10px;
-    cursor: pointer;
-    background: #fff;
-    color: #a49;
-    font-size: 20px;
-    position: absolute;
+  border: none;
+  height: 100%;
+  width: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+  background: #fff;
+  color: #a49;
+  font-size: 20px;
+  position: absolute;
 }
 
 .done-btn {
-    right: 40px;
+  right: 40px;
 }
 
-
 .del-btn {
-    right: 0;
+  right: 0;
 }
 
 .del-btn:focus,
 .done-btn:focus {
-    outline: none;
+  outline: none;
 }
 
 .del-btn:hover,
 .done-btn:hover {
-    color: #f55;
+  color: #f55;
 }
 
 .author-comment {
-    position: absolute;
-    bottom: 0px;
-    height: 50px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 small span {
-    color: #f55;
+  color: #f55;
 }
 
 .del-transition {
-    opacity: 0 !important;
-    transform: translateY(25px);
+  opacity: 0 !important;
+  transform: translateY(25px);
 }
 
 .added-transition {
-    animation: appear 0.3s ease;
+  animation: appear 0.3s ease;
 }
 
 .completed-task {
-    background: #444;
-    text-decoration: line-through;
+  background: #444;
+  text-decoration: line-through;
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
 
-    to {
-        opacity: 100;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 100;
+    transform: translateY(0);
+  }
 }
 
-@media(min-height: 900px) {
-    .todo-list-container {
-        max-height: 700px;
-    }
+@media (min-height: 900px) {
+  .todo-list-container {
+    max-height: 700px;
+  }
 }
