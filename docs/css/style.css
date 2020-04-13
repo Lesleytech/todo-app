@@ -160,13 +160,12 @@ small span {
 }
 
 .del-transition {
-    opacity: 0;
-    transform: translateY(50px);
-
+    opacity: 0 !important;
+    transform: translateY(25px);
 }
 
 .added-transition {
-    animation: appear 0.5s ease;
+    animation: appear 0.3s ease;
 }
 
 .completed-task {
