@@ -63,7 +63,7 @@ form input::placeholder {
   top: 150px;
   width: 100%;
   overflow: auto;
-  max-height: calc(100vh - 200px);
+  max-height: calc(100% - 200px);
 }
 
 .todo-list-container::-webkit-scrollbar {
