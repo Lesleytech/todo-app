@@ -1,6 +1,3 @@
-var html = document.documentElement;
-html.scrollTop += 50;
-
 //Set an event Listener to load todos from the local storage
 document.addEventListener("DOMContentLoaded", () => {
   getTodos();
