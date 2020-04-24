@@ -11,7 +11,7 @@ class Todo {
   }
 }
 
-//Show todo items on the DOM
+//Show todo items in the DOM
 function showTodos(todoList, isAdding) {
   const todoListContainer = document.querySelector("#todo-list");
   if (todoList.length > 0) {
@@ -39,8 +39,8 @@ function showTodos(todoList, isAdding) {
   }
   isAdding &&
     document
-      .getElementById(`${todoList.length - 1}`)
-      .classList.add("added-transition");
+    .getElementById(`${todoList.length - 1}`)
+    .classList.add("added-transition");
 }
 
 //Add new todo elements
