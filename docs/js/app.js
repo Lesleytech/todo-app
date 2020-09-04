@@ -1,5 +1,5 @@
 //Set an event Listener to load todos from the local storage
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   getTodos();
 });
 
@@ -13,7 +13,7 @@ class Todo {
 
 //Show todo items in the DOM
 function showTodos(todoList, isAdding) {
-  const todoListContainer = document.querySelector("#todo-list");
+  const todoListContainer = document.querySelector('#todo-list');
   if (todoList.length > 0) {
     todoListContainer.innerHTML = todoList
       .map((todo, index) => {
@@ -33,69 +33,69 @@ function showTodos(todoList, isAdding) {
                         </button>
                     </li>`;
       })
-      .join("");
+      .join('');
   } else {
-    todoListContainer.innerHTML = `<p style="color: white;">You don't have any todos yet</p>`;
+    todoListContainer.innerHTML = `<p class="no-todo">You don't have any todos yet</p>`;
   }
   isAdding &&
     document
-    .getElementById(`${todoList.length - 1}`)
-    .classList.add("added-transition");
+      .getElementById(`${todoList.length - 1}`)
+      .classList.add('added-transition');
 }
 
 //Add new todo elements
 function addTodo(e) {
   e.preventDefault();
-  const todo = document.getElementById("todo-input").value;
+  const todo = document.getElementById('todo-input').value;
   const newTodo = new Todo(todo);
   saveLocalTodos(newTodo);
   getTodos(true);
-  document.getElementById("todo-input").value = "";
+  document.getElementById('todo-input').value = '';
 }
 
 //Delete todo elements
 function deleteTodo(todoId) {
   const element = document.getElementById(todoId);
-  const todos = JSON.parse(localStorage.getItem("todos"));
-  element.classList.add("del-transition");
+  const todos = JSON.parse(localStorage.getItem('todos'));
+  element.classList.add('del-transition');
   setTimeout(() => {
     todos.splice(todoId, 1);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem('todos', JSON.stringify(todos));
     showTodos(todos);
   }, 300);
 }
 
 //Change the completed status of a todo element
 function changeStatus(todoId) {
-  const todos = JSON.parse(localStorage.getItem("todos"));
+  const todos = JSON.parse(localStorage.getItem('todos'));
   const completedStatus =
     todos[todos.findIndex((todo, index) => index == todoId)].completed;
   todos[
     todos.findIndex((todo, index) => index == todoId)
   ].completed = !completedStatus;
-  localStorage.setItem("todos", JSON.stringify(todos));
+  localStorage.setItem('todos', JSON.stringify(todos));
   showTodos(todos);
 }
 
 //Save todo to local storage
 function saveLocalTodos(todo) {
   let todos;
-  if (localStorage.getItem("todos") === null) {
+  if (localStorage.getItem('todos') === null) {
     todos = [];
   } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos = JSON.parse(localStorage.getItem('todos'));
   }
   todos.push(todo);
-  localStorage.setItem("todos", JSON.stringify(todos));
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 //get todos from the local storage
 function getTodos(isAdding) {
   let todos;
-  if (localStorage.getItem("todos") === null) {
+  if (localStorage.getItem('todos') === null) {
     todos = [];
   } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos = JSON.parse(localStorage.getItem('todos'));
   }
   showTodos(todos, isAdding);
 }

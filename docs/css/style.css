@@ -183,6 +183,11 @@ small span {
   text-decoration: line-through;
 }
 
+.no-todo {
+  color: #666;
+  font-style: italic;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
